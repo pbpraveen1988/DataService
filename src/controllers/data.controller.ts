@@ -11,15 +11,16 @@ export class DataController {
   constructor(private readonly dataService: DataService) { }
 
   @MessagePattern('list')
-  async getList(requestContext: RequestContext): Promise<any> {
+  async getList(requestContext: RequestContext){
     this.logger.log('list of records for object');
-    return await this.dataService.getList(requestContext.object, requestContext.query);
+    return this.dataService.getList(requestContext.object, requestContext.query);
+     
   }
 
   @MessagePattern('read')
-  async getRecord(requestContext: RequestContext): Promise<any> {
+  async getRecord(requestContext: RequestContext) {
     this.logger.log('get the record of particular id');
-    return await this.dataService.getRecordByIdOrKey(requestContext.object, requestContext.idOrKey, requestContext.query);
+    return this.dataService.getRecordByIdOrKey(requestContext.object, requestContext.idOrKey, requestContext.query);
   }
 
 }
