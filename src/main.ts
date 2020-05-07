@@ -5,10 +5,18 @@ import { Logger } from '@nestjs/common';
 
 async function bootstrap() {
   const logger = new Logger('DataService');
+
+
+  /*
+  * @author : Praveen Kumar
+  * @comment : host will be the name of container, so other container can communicate
+  * NOTE : both containers should be on same bridge if host is same. 
+  * @date: 2020-05-03 13:00:42
+  */
   const dataServiceOptions: MicroserviceOptions = {
     transport: Transport.TCP,
     options: {
-      host: '127.0.0.1',
+      host: 'dataservice',
       port: 8100
     }
   }
