@@ -1,0 +1,10 @@
+{
+    "host": "nestjs.database.windows.net",
+    "type": "mssql",
+    "username": "pbpraveen1988",
+    "password": "Yourtest0001",
+    "database": "nestjs_microapp",
+    "synchronize": true,
+    "entities": [],
+    "port": 1433
+}
