@@ -6,8 +6,49 @@ DataService is a  Microservice on the top of Nest js framework using Node JS
 
 Full Url for testing 
 
+#### GET 
+
+##### To get the list of records 
 `http://localhost:3002/data/v1.0/sms_campaign?select=all&where=id=6:8:10&order_by=-id`
 
+##### To get the specific record with Id
+`http://localhost:3002/data/v1.0/sms_campaign/6`
+
+ The above query will return the record which id is `6`
+
+
+#### POST
+`http://localhost:3002/data/v1.0/sms_campaign`
+
+ Payload for POST
+ 
+ ```
+     {
+         name :'Sachin'
+         dob:'10/10/1950',
+         address: '1st Street, 7th Lawn, India'
+     }
+ ```
+ 
+ #### DELETE
+ 
+ `http://localhost:3002/data/v1.0/sms_campaign/6`
+  
+  The above url will delete the record which id is `6`
+  
+ #### PATCH
+ `http://localhost:3002/data/v1.0/sms_campaign/6`
+
+ Payload for PATCH
+ ```
+     {
+        name :'Sachin',
+        dob:'10/10/1950',
+        address: '1st Street, 7th Lawn, India'
+      }
+```
+
+#### Basic structure of Data Service.
 
 API to get the data from the table
 
