@@ -4,6 +4,11 @@ DataService is a  Microservice on the top of Nest js framework using Node JS
 
 ## Data Controller.
 
+Full Url for testing 
+
+`http://localhost:3002/data/v1.0/sms_campaign?select=all&where=id=6:8:10&order_by=-id`
+
+
 API to get the data from the table
 
 URL => `/data/v1.0/{tableName}`
